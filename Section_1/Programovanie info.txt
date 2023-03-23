@@ -1,0 +1,80 @@
+
+Týden 1
+Úvod do HTML, CSS
+Týden 2
+Responzivní design webových stránek
+- media 
+- 
+
+Týden 3
+Flexbox
+
+Týden 4
+Grid
+
+
+JS QUESTIONS
+1. explain higher order function(return other function)
+2. what are arrow functions and diference between arrow function and regular function(Can not be use as const)
+3. what will be showen in concole: 
+function run() {
+    console.log(1);
+    setTimeout(function(){console.log(2)}, 1000)
+    setTimeout(function(){console.log(3)}, 0)
+    console.log(4);
+}
+run();
+result: 1 2 4 3
+
+function foo1()
+{
+    return {
+        bar: "hello"
+    };
+}
+function foo2()
+{
+    return // function will return here
+    {
+        bar: "hello"
+    };
+}
+result: foo1 will return object, foo2 will return undefined , 
+
+4. What are JS promises and name use case 
+- Promise object
+
+
+Týden 5 
+Úvod do JavaScriptu
+console.log("Console log message")
+const - general rule
+    Variables defined with const cannot be Redeclared.
+    Variables defined with const cannot be Reassigned.
+    Variables defined with const have Block Scope.
+var - can change
+let - can be redeclare
+
+Týden 6 
+Proměnné, operátory, podmínky, datové struktury, verze JS
+
+Týden 7 
+Datové struktury, smyčky, o práci web developera
+
+Týden 8 
+Funkce, GitHub
+
+Blok 3 
+Front-end development a projekty
+
+Týden 9 
+Hands-on session – práce na skupinovém projektu
+
+Týden 10
+DOM, pokročilejší koncepty JS
+
+Týden 11 
+AJAX, fetch, protokoly, debugging, REST API
+
+Týden 12
+Práce na projektu, opakování
