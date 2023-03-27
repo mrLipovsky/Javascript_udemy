@@ -28,8 +28,8 @@
 // multiple 
 // lines`);
 
-const age = 15;
-const isOldEnought = age >= 18;
+// const age = 15;
+// const isOldEnought = age >= 18;
 
 // if (isOldEnought) {
 //     console.log('Sara can start licence licence');
@@ -37,19 +37,47 @@ const isOldEnought = age >= 18;
 //     console.log('Sara can not start licence licence');
 // }
 
-if (age >= 18) {
-  console.log('Sara can start licence licence');
-} else {
-  const yearsLeft = 18 - age;
-  console.log(`Sara can not start licence, she needs to wait another ${yearsLeft} years`);
-}
+// if (age >= 18) {
+//   console.log('Sara can start licence licence');
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`Sara can not start licence, she needs to wait another ${yearsLeft} years`);
+// }
 
-const birthYear = 1991;
+// const birthYear = 1991;
 
-let century;
-if (birthYear <= 2000 ){
-  century = 20;
-} else {
-  century = 21;
-}
-console.log(century);
+// let century;
+// if (birthYear <= 2000 ){
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(century);
+
+// convert string to number
+const inputYear = '1991';
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+console.log(inputYear + 18);
+
+//NaN - not a number 
+console.log(Number('jonas'));
+
+// convert string to string
+console.log(String(34), 34);
+
+// type coercion
+console.log('I am' + 23 + 'years old');
+// string this is same thing
+console.log('I am' + '23' + 'years old');
+console.log('I am' + string(23) + 'years old');
+
+//if - operator(-,+,..) it will change 
+console.log('I am' + '23' + 'years old')
+console.log('23' - '10' - 3);
+console.log('23' * '10' / 3);
+
+let n = '1'+ 1; //'11' string
+n = n - 1; 
+console.log(n);
+
