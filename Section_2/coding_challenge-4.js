@@ -18,18 +18,25 @@
 // § Value X is between 50 and 300, if it's >= 50 && <= 300 �
 // GOOD LUCK �
 
+const bill = 275;
 
-const bill = 190;
-const typ = 0;
+const tipOne = bill*1.15
+const tipTwo = bill*1.20
 
-switch (bill) {
-    case bill >= 50 && bill <= 300:
-        receipt = bill*0.15;
-        tip = receipt - bill;
-        console.log({bill}, {tip})
-        break;
+bill >= 50 && bill <= 300
+  ? console.log("will pay: " + bill + " and your tip is 15%: " + tipOne)
+  : console.log("will pay: " + bill + " and your tip is 20%: " + tipTwo);
 
-    case bill <= 50 || bill >= 300:
-        console.log(bill*20);
-        break;
-}
+// const typ = 0;
+
+// switch (bill) {
+//     case bill >= 50 && bill <= 100:
+//         receipt = bill*0.15;
+//         tip = receipt - bill;
+//         console.log({bill}, {tip})
+//         break;
+
+//     case bill <= 50 || bill >= 300:
+//         console.log(bill*20);
+//         break;
+// }
