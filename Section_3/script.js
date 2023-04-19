@@ -72,7 +72,10 @@
 // console.log(yearUntilRetaiement(1991, 'Jonas'));
 // console.log(yearUntilRetaiement(1991, 'Mike'));
 
-// ARRAY
+/////////////////////////////
+// ARRAY []
+/////////////////////////////
+
 // const friend1 = 'Michal';
 // const friend2 = 'Steven';
 // const friend3 = 'Peter';
@@ -112,39 +115,63 @@
 // const ages = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length -1 ])];
 
 //Add
-const friends = ['Michal', 'Mike', 'Peter'];
-const newLenght = friends.push('Jay'); // add to end of list
-console.log(friends);
-console.log(newLenght);
+// const friends = ['Michal', 'Mike', 'Peter'];
+// const newLenght = friends.push('Jay'); // add to end of list
+// console.log(friends);
+// console.log(newLenght);
 
-friends.unshift('John'); // add to beggining list
-console.log(friends);
+// friends.unshift('John'); // add to beggining list
+// console.log(friends);
 
-//Remove
-friends.pop(); // remove last
-const popped = friends.pop(); // just log the popped value 
-console.log(popped); 
-console.log(friends);
+// //Remove
+// friends.pop(); // remove last
+// const popped = friends.pop(); // just log the popped value 
+// console.log(popped); 
+// console.log(friends);
 
-friends.shift(); // remove first
-console.log(friends);
+// friends.shift(); // remove first
+// console.log(friends);
 
-console.log(friends.indexOf('Mike')); // index 
-console.log(friends.indexOf('bob')); // is not in array will be -1
+// console.log(friends.indexOf('Mike')); // index 
+// console.log(friends.indexOf('bob')); // is not in array will be -1
 
-friends.push(23);
+// friends.push(23);
 
-console.log(friends.includes('Mike')); // check if is in array True
-console.log(friends.includes('Bob')); // check if is in array False
-console.log(friends.includes('23')); // check number and we looking for string is in array False, if looking for number - True
-
-
-if (friends.includes('Peter')) {
-    console.log('Your firend is call Peter')
-}
+// console.log(friends.includes('Mike')); // check if is in array True
+// console.log(friends.includes('Bob')); // check if is in array False
+// console.log(friends.includes('23')); // check number and we looking for string is in array False, if looking for number - True
 
 
+// if (friends.includes('Peter')) {
+//     console.log('Your firend is call Peter')
+// }
 
 
+/////////////////////////////
+// OBJECT {}
+/////////////////////////////
 
+const jonas = {
+    firstName: 'John',
+    lastName: 'Lipo',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['John', 'Peter', 'Michal']
+};
 
+console.log(jonas);
+
+console.log(jonas.firstName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+
+console.log(jonas['first'+ nameKey]); // John
+console.log(jonas['last'+ nameKey]); // Lipo
+
+// console.log(jonas.'last'+ nameKey); // does not work
+
+const interestedIn = prompt('What do you think about John. fistName, lastName, age, job, friends')
+
+console.log(jonas[interestedIn]); // if job than teacher
+// console.log(jonas.interestedIn); // does not work
