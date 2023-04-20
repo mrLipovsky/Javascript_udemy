@@ -151,27 +151,62 @@
 // OBJECT {}
 /////////////////////////////
 
-const jonas = {
-    firstName: 'John',
-    lastName: 'Lipo',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['John', 'Peter', 'Michal']
-};
+// const jonas = {
+//     firstName: 'John',
+//     lastName: 'Lipo',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['John', 'Peter', 'Michal']
+// };
 
-console.log(jonas);
+// console.log(jonas);
 
-console.log(jonas.firstName);
-console.log(jonas['lastName']);
+// console.log(jonas.firstName);
+// console.log(jonas['lastName']);
 
-const nameKey = 'Name';
+// const nameKey = 'Name';
 
-console.log(jonas['first'+ nameKey]); // John
-console.log(jonas['last'+ nameKey]); // Lipo
+// console.log(jonas['first'+ nameKey]); // John
+// console.log(jonas['last'+ nameKey]); // Lipo
 
 // console.log(jonas.'last'+ nameKey); // does not work
 
-const interestedIn = prompt('What do you think about John. fistName, lastName, age, job, friends')
+// const interestedIn = prompt('What do you think about John. fistName, lastName, age, job, friends')
 
-console.log(jonas[interestedIn]); // if job than teacher
 // console.log(jonas.interestedIn); // does not work
+
+// if(jonas[interestedIn]){
+//     console.log(jonas[interestedIn]); // if job than teacher
+// } else {
+// console.log('wrong request, '); //
+// }
+
+// jonas.location = 'Portugal';
+// jonas['twiter'] = '@jonasschmedatman';
+// console.log(jonas);
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends: ${jonas.friends} and his best friend is ${jonas.friends[2]}`)
+
+/////////////////////////////
+// OBJECT METODES {}
+/////////////////////////////
+const jonas = {
+    firstName: 'John',
+    lastName: 'Lipo',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['John', 'Peter', 'Michal'],
+    hasDriveLicense: true,
+
+    // calcAge: function(birthYear){
+    // return 2037 - birthYear;
+    // }
+
+    calcAge: function () {
+        console.log(this)
+        return 2037 - this.birthYear;
+    }
+};
+
+console.log(jonas.calcAge());
+console.log(jonas['calcAge']());
