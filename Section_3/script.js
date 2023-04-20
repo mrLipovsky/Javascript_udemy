@@ -196,17 +196,44 @@ const jonas = {
     birthYear: 1991,
     job: 'teacher',
     friends: ['John', 'Peter', 'Michal'],
-    hasDriveLicense: true,
+    hasDriveLicense: false,
 
     // calcAge: function(birthYear){
     // return 2037 - birthYear;
     // }
 
-    calcAge: function () {
-        console.log(this)
-        return 2037 - this.birthYear;
-    }
-};
+    // calcAge: function () {
+    //     // console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
 
-console.log(jonas.calcAge());
+    calcAge: function () {
+        this.age = this.birthYear;
+        return this.age;
+    },
+
+    // getSummary: function() { 
+    //     if (this.hasDriveLicense == true) {
+    //     return `${this.firstName} is a ${this.calcAge()} old ${this.job} and he has drivelicense`
+    // } else {
+    //     return `${this.firstName} is a ${this.year} old ${this.job} and he has not drivelicense`
+    // } 
+    // }
+
+    getSummary: function() { 
+        return `${this.firstName} is a ${this.calcAge()} old ${this.job} and he has ${this.hasDriveLicense ? 'a' : 'no'} drivers license`
+    } 
+
+};
+// console.log(jonas.calcAge());
+// console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.getSummary());
 console.log(jonas['calcAge']());
+
+let getSummary = Object.create(jonas, {
+
+});
+
+
