@@ -244,49 +244,72 @@
 // console.log('ligftweith repetition 1')
 // console.log('ligftweith repetition 2')
 
-for (let rep = 1; rep <= 10; rep++) {
-    console.log(`ligftweith repetition ${rep}`);
-}
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`ligftweith repetition ${rep}`);
+// }
+
+// const jonasArray = [
+//     'Jonas',
+//     'Schmedmann',
+//     2037-1991,
+//     'teacher',
+//     ['Michal', 'Peter', 'Steven']
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < jonasArray.length; i++) {
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+
+//     types[i] = typeof jonasArray[i];
+//     types.push(typeof jonasArray[i]);
+// }
+// console.log(types)
+
+
+// const years = [1991, 2007, 1696, 2003];
+// const ages = []
+
+// for (let index = 0; index < years.length; index++) {
+//     ages.push(3037 - years[index]);
+// }
+
+// console.log(ages)
+
+// // continue and break statement of for loop
+// console.log('continue strings only')
+// for (let i = 0; i < jonasArray.length; i++) {
+//     if(typeof jonasArray[i] !== 'string') continue;
+
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+
+// console.log('break with number')
+// for (let i = 0; i < jonasArray.length; i++) {
+//     if(typeof jonasArray[i] !== 'number') break;
+
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+// }
 
 const jonasArray = [
     'Jonas',
     'Schmedmann',
     2037-1991,
     'teacher',
-    ['Michal', 'Peter', 'Steven']
+    true
 ];
 
-const types = [];
-
-for (let i = 0; i < jonasArray.length; i++) {
-    console.log(jonasArray[i], typeof jonasArray[i]);
-
-    types[i] = typeof jonasArray[i];
-    types.push(typeof jonasArray[i]);
-}
-console.log(types)
-
-
-const years = [1991, 2007, 1696, 2003];
-const ages = []
-
-for (let index = 0; index < years.length; index++) {
-    ages.push(3037 - years[index]);
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(i, jonasArray[i])
 }
 
-console.log(ages)
-
-// continue and break statement of for loop
-console.log('continue strings only')
-for (let i = 0; i < jonasArray.length; i++) {
-    if(typeof jonasArray[i] !== 'string') continue;
-
-    console.log(jonasArray[i], typeof jonasArray[i]);
-}
-
-console.log('break with number')
-for (let i = 0; i < jonasArray.length; i++) {
-    if(typeof jonasArray[i] !== 'number') break;
-
-    console.log(jonasArray[i], typeof jonasArray[i]);
+for (let index = 1; index <= 4; index++) {
+    const element = index;
+    console.log(` ------- Starting excercise ${element} `);
+    
+    for (let rep = 1; rep < 6; rep++) {
+        const element = rep;
+        console.log(` Lifting weight repetition ${rep} `)
+        
+    }
 }
