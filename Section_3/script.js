@@ -291,25 +291,75 @@
 //     console.log(jonasArray[i], typeof jonasArray[i]);
 // }
 
-const jonasArray = [
-    'Jonas',
-    'Schmedmann',
-    2037-1991,
-    'teacher',
-    true
-];
+// const jonasArray = [
+//     'Jonas',
+//     'Schmedmann',
+//     2037-1991,
+//     'teacher',
+//     true
+// ];
 
-for (let i = jonasArray.length - 1; i >= 0; i--) {
-    console.log(i, jonasArray[i])
+// for (let i = jonasArray.length - 1; i >= 0; i--) {
+//     console.log(i, jonasArray[i])
+// }
+
+// for (let index = 1; index <= 4; index++) {
+//     const exercise = index;
+//     console.log(` ------- Starting excercise ${exercise} `);
+    
+//     for (let index = 1; index < 6; index++) {
+//         const rep = index;
+//         console.log(`Excercise ${exercise} Lifting weight repetition ${rep} `);
+        
+//     }
+// }
+
+const names = ['Ed', 'John', 'Maria', 'Elisa', 'Burito', 'Harry', 'Potter'];
+
+for (name of names) {
+    console.log(`${name}`);
+    if (name === 'Maria') {
+        console.log(`Hello there ${name}`);
+    break;
+    }
 }
 
-for (let index = 1; index <= 4; index++) {
-    const element = index;
-    console.log(` ------- Starting excercise ${element} `);
-    
-    for (let rep = 1; rep < 6; rep++) {
-        const element = rep;
-        console.log(` Lifting weight repetition ${rep} `)
-        
-    }
+const arr = ['bager', 'name', 'babon']
+
+for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    console.log(`${element}`);
+}
+
+for (const e of arr) {
+    console.log(`${e}`);
+}
+
+
+
+// //////////////////////////////
+// FOR WHILE
+// //////////////////////////////
+
+
+// let repe = 1;
+// while (repe <= 10) {
+//     console.log(`Lifting weight repetition ${repe}`)    
+//     repe++;
+// }
+
+// // let number = 0;
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//     console.log(`Dice number is ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log('Loop is about to end...');
+// }
+
+let loading = 0;
+
+while (loading < 100) {
+    console.log('website is loading...');
+    loading++;
 }
