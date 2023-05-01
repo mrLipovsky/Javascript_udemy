@@ -7,28 +7,43 @@
 // Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
 // Hints: Call ‘calcTip ‘in the loop and use the push method to add values to the
 // tips and totals arrays 😉 Bonus:
-// 4. Bonus:Writeafunction'calcAverage'whichtakesanarraycalled'arr'as an argument. This function calculates the average of all numbers in the given array. This is a difficult challenge (we haven't done this before)! Here is how to solve it:
+// 4. Bonus:Writeafunction'calcAverage'whichtakesanarrayvcalled 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a difficult challenge (we haven't done this before)! Here is how to solve it:
 // 4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together
 // 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
 // 4.3. Call the function with the 'totals' array
 // GOOD LUCK 😀
 
-var bills = [23, 34, 22, 11, 40];
+var bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 var tips = [];
 var totals = [];
 
 function calcTip(value) {
     if (value > 50 && value < 300) {
-        let tip15 = (value * 1.15) - value
-        return tip15 
+        let tip15 = (value * 1.15) - value;
+        return tip15;
     } else {
-        let tip20 = (value * 1.20) - value
-        return tip20 
+        let tip20 = (value * 1.20) - value;
+        return tip20;
         }
     }
 
-for (let index = bills; index < bills.length; index++) {
-    const value = calcTip(index)
-    console.log(value);
-    // array[index];
+for (let bill of bills) {
+    let value = calcTip(bill);
+    let total = bill + value;
+    totals.push(total);
+    tips.push(value);
 }
+
+console.log(tips);
+console.log(totals);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let index = 0; index < arr.length; index++) {
+        sum += arr[index];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2,3,7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));

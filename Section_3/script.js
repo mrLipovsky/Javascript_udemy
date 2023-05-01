@@ -314,26 +314,26 @@
 //     }
 // }
 
-const names = ['Ed', 'John', 'Maria', 'Elisa', 'Burito', 'Harry', 'Potter'];
+// const names = ['Ed', 'John', 'Maria', 'Elisa', 'Burito', 'Harry', 'Potter'];
 
-for (name of names) {
-    console.log(`${name}`);
-    if (name === 'Maria') {
-        console.log(`Hello there ${name}`);
-    break;
-    }
-}
+// for (name of names) {
+//     console.log(`${name}`);
+//     if (name === 'Maria') {
+//         console.log(`Hello there ${name}`);
+//     break;
+//     }
+// }
 
-const arr = ['bager', 'name', 'babon']
+// const arr = ['bager', 'name', 'babon']
 
-for (let index = 0; index < arr.length; index++) {
-    const element = arr[index];
-    console.log(`${element}`);
-}
+// for (let index = 0; index < arr.length; index++) {
+//     const element = arr[index];
+//     console.log(`${element}`);
+// }
 
-for (const e of arr) {
-    console.log(`${e}`);
-}
+// for (const e of arr) {
+//     console.log(`${e}`);
+// }
 
 
 
@@ -357,9 +357,9 @@ for (const e of arr) {
 //     if (dice === 6) console.log('Loop is about to end...');
 // }
 
-let loading = 0;
+// let loading = 0;
 
-while (loading < 100) {
-    console.log('website is loading...');
-    loading++;
-}
+// while (loading < 100) {
+//     console.log('website is loading...');
+//     loading++;
+// }
