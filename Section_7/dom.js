@@ -17,6 +17,10 @@ let secretNo = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
+const displayMessage = function(message) {
+    document.querySelector('.message').textContent = message
+}
+
     // reset button
     document.querySelector('.again').addEventListener('click', function() {
             console.log('again')
@@ -39,7 +43,8 @@ let highScore = 0;
     
     //when player wins
     } else if (guess === secretNo) {
-        document.querySelector('.message').textContent = 'Correct number';
+        // document.querySelector('.message').textContent = 'Correct number';
+        displayMessage('Correct number');
         document.querySelector('.number').textContent = secretNo;
         document.querySelector('body').style.backgroundColor = 'green';
         document.querySelector('.number').style.width = '30rem';
@@ -49,22 +54,10 @@ let highScore = 0;
             document.querySelector('.highScore').textContent = highScore;
         }
 
-    //when number is higher than
-    } else if (guess > secretNo) {
+    //when player lose
+    } else if(guess !== secretNo) {
         if(score > 1) {
-            document.querySelector('.message').textContent = 'Number too high!';
-            score--;
-            document.querySelector('.score').textContent = score;
-        } else {
-            document.querySelector('.message').textContent = 'You lost the game';
-            document.querySelector('.score').textContent = 0;
-            document.querySelector('body').style.backgroundColor = 'red';
-        }
-
-    //when number is smaller than
-    } else if (guess < secretNo) {
-        if(score > 1) {
-            document.querySelector('.message').textContent = 'Number too low!';
+            document.querySelector('.message').textContent = guess > secretNo ? 'Number too high!': 'Number too low!';
             score--;
             document.querySelector('.score').textContent = score;
         } else {
@@ -73,6 +66,32 @@ let highScore = 0;
             document.querySelector('body').style.backgroundColor = 'red';
         }
     }
+    
+    
+    // //when number is higher than
+    // else if (guess > secretNo) {
+    //     if(score > 1) {
+    //         document.querySelector('.message').textContent = 'Number too high!';
+    //         score--;
+    //         document.querySelector('.score').textContent = score;
+    //     } else {
+    //         document.querySelector('.message').textContent = 'You lost the game';
+    //         document.querySelector('.score').textContent = 0;
+    //         document.querySelector('body').style.backgroundColor = 'red';
+    //     }
+
+    // //when number is smaller than
+    // } else if (guess < secretNo) {
+    //     if(score > 1) {
+    //         document.querySelector('.message').textContent = 'Number too low!';
+    //         score--;
+    //         document.querySelector('.score').textContent = score;
+    //     } else {
+    //         document.querySelector('.message').textContent = 'You lost the game';
+    //         document.querySelector('.score').textContent = 0;
+    //         document.querySelector('body').style.backgroundColor = 'red';
+    //     }
+    // }
 });
  
 // Coding Challenge #1
