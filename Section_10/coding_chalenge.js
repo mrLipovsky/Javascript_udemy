@@ -3,7 +3,7 @@
 // A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter 'poll' object below.
 
 // Your tasks:
-// 1. Createamethodcalled'registerNewAnswer'onthe'poll'object.The method does 2 things:
+// 1. Create a method called 'registerNewAnswer' on the 'poll' object. The method does 2 things:
 // 1.1. Display a prompt window for the user to input the number of the
 // selected option. The prompt should look like this: What is your favourite programming language?
 // 0: JavaScript
@@ -26,9 +26,28 @@
 // § Data2:[1,5,3,9,6,1]
 // Hints: Use many of the tools you learned about in this and the last section 
 
-const poll = {
-    question: 'What is your favourite programming language?', 
-    options: ['0: JavaScript", "1: Python", "2: Rust", "3: C++'],
-    // This generates [0, 0, 0, 0]. More in the next section! 
-    answers: new Array(4).fill(0),
-    };
+// const poll = {
+//     question: 'What is your favourite programming language?', 
+//     options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
+//     // This generates [0, 0, 0, 0]. More in the next section! 
+//     answers: new Array(4).fill(0),
+//     };
+
+const options = ["0: JavaScript", "1: Python", "2: Rust", "3: C++"];
+
+// const registerNewAnswer = function() {
+//     // let answares = prompt(poll.question);
+    // function num(element) {
+    //     if (element) {
+    //       return true;
+    //     }
+    console.log(options.findIndex(3));
+// }
+
+    // if(answares === poll.options[3]) {
+    //     console.log('lipo')
+    // }
+
+// }
+
+// console.log(registerNewAnswer())
