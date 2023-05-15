@@ -13,7 +13,7 @@
 // (Write option number)
 
 // 1.2. Based on the input number, update the 'answers' array property. For example, if the option is 3, increase the value at position 3 of the array by 1. Make sure to check if the input is a number and if the number makes sense (e.g. answer 52 wouldn't make sense, right?)
-// 2. Callthismethodwhenevertheuserclicksthe"Answerpoll"button.
+// 2. Call this method when ever the user clicks the "Answerpoll" button.
 // 3. Createamethod'displayResults'whichdisplaysthepollresults.The
 // method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If type is 'array', simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "Poll results are 13, 2, 4, 1".
 // 4. Runthe'displayResults'methodattheendofeach 'registerNewAnswer' method call.
@@ -26,28 +26,21 @@
 // § Data2:[1,5,3,9,6,1]
 // Hints: Use many of the tools you learned about in this and the last section 
 
-// const poll = {
-//     question: 'What is your favourite programming language?', 
-//     options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
-//     // This generates [0, 0, 0, 0]. More in the next section! 
-//     answers: new Array(4).fill(0),
-//     };
+const poll = {
+    question: 'What is your favourite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++ \n (Write option number)', 
+    options: ["JavaScript", "Python", "Rust", "C++"],
+    // This generates [0, 0, 0, 0]. More in the next section! 
+    answers: new Array(4).fill(0),
+    };
 
-const options = ["0: JavaScript", "1: Python", "2: Rust", "3: C++"];
-
-// const registerNewAnswer = function() {
-//     // let answares = prompt(poll.question);
-    // function num(element) {
-    //     if (element) {
-    //       return true;
-    //     }
-    console.log(options.findIndex(3));
-// }
+const registerNewAnswer = function() {
+    // let answares = prompt(poll.question);
+    console.log(Object.keys(poll.options[3]));
 
     // if(answares === poll.options[3]) {
     //     console.log('lipo')
     // }
 
-// }
+}
 
-// console.log(registerNewAnswer())
+console.log(registerNewAnswer())
