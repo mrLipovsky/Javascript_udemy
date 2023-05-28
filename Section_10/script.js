@@ -206,3 +206,92 @@ const lufthansa = {
 // const addVAT2 = addTaxRate(0.23)
 // console.log(addVAT2(100));
 // console.log(addVAT2(23));
+
+// =========
+// inmmediately invoke unction expresion 
+// =========
+
+// const runOnce = function(){
+//     console.log('this will never run again')
+// };
+
+// runOnce();
+
+// // Function expretion
+// (function() {
+//     console.log('this will never run again')
+//     const isPrivate = 2;
+// })();
+
+// console.log(isPrivate)
+
+// (() => console.log('this will never run again'))();
+
+// {
+//     const isPrivate = 23;
+//     var notPrivate = 12;
+// }
+// console.log(isPrivate)
+// console.log(notPrivate)
+
+// =========
+// Clousers
+// =========
+
+// const secureBooking = function(){
+//     let passangerCount = 0;
+
+//     return function() {
+//         passangerCount++;
+//         console.log(`${passangerCount} passanger`)
+//     }
+// }
+
+// // booker is function that return function secureBooking
+// const booker = secureBooking();
+
+// booker();
+// booker();
+// booker();
+
+// console.dir(booker);
+
+// example one 
+let f;
+const g = function(){
+    const a = 23;
+    f = function(){
+        console.log(a * 2)
+    };
+}
+console.dir(g);
+
+
+const h = function(){
+    const b = 277;
+    f = function(){
+        console.log(b * 2)
+    };
+}
+g();
+f();
+console.dir(f);
+
+h();
+f();
+console.dir(f);
+
+// example two
+const boardPassangers = function(n, wait) {
+    const perGroup = n / 3;
+
+    setTimeout(function(){
+        console.log(`we are now boarding all ${n} passangers`);
+        console.log(`there are 3 groups, each with ${perGroup} passangers`);
+    }, wait * 1000)
+
+    console.log(`Will start boarding in ${wait} second`);
+};
+
+const perGroup = 1000;
+boardPassangers(100, 3);
