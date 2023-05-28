@@ -16,12 +16,12 @@
 
 // 2. Call this method when ever the user clicks the "Answerpoll" button.
 
-// 3. Createamethod'displayResults'whichdisplaysthepollresults.The
+// 3. Create a method 'displayResults' which displays the poll results. The
 // method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If type is 'array', simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "Poll results are 13, 2, 4, 1".
 
-// 4. Runthe'displayResults'methodattheendofeach 'registerNewAnswer' method call.
+// 4. Run the 'displayResults' method at the end of each 'registerNewAnswer' method call.
 
-// 5. Bonus:Usethe'displayResults'methodtodisplaythe2arraysinthetest data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll object! So what should the this keyword look like in this situation?
+// 5. Bonus:Use the 'displayResults' method to display the 2arrays in the test data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll object! So what should the this keyword look like in this situation?
 
 // The Complete JavaScript Course 20
 // Test data for bonus:
@@ -34,33 +34,42 @@ const poll = {
     options: ["0:JavaScript", "1:Python", "2:Rust", "3:C++"],
     // This generates [0, 0, 0, 0]. More in the next section! 
     answers: new Array(4).fill(0),
-    };
-    
-document.getElementById('poll').onclick = function(){registerNewAnswer()
-}
+};
 
 const registerNewAnswer = function() {
-    let answares = prompt(poll.question);    
+    let answ = Number(prompt(poll.question));    
 
-    if(answares === poll.options[0][0]) {
+    if(answ === Number(poll.options[0][0])) {
         poll.answers[0] += 1
         console.log('lipo')
-    } else if (answares === poll.options[1][0]) {
+
+    } else if (answ === Number(poll.options[1][0])) {
         poll.answers[1] += 1
-
         console.log('lipo1')
-    } else if (answares === poll.options[2][0]) {
+
+    } else if (answ === Number(poll.options[2][0])) {
         poll.answers[2] += 1
-
         console.log('lipo2')
-    } else if (answares === poll.options[3][0]) {
-        poll.answers[3] += 1
 
+    } else if (answ === Number(poll.options[3][0])) {
+        poll.answers[3] += 1
         console.log('lipo3')
     }
+    displayResults();
 }
 
-console.log(poll.answers)
+
+const displayResults = function() {
+    console.log(poll.answers);
+    console.log(`Poll results are ${poll.answers}`);
+};
+
+
+closeButton = document.getElementById('poll');
+closeButton.addEventListener('click', () => {
+    registerNewAnswer();
+});
+
 
 // console.log(registerNewAnswer())
 
